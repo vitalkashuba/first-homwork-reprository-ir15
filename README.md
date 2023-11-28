@@ -1,1 +1,2 @@
 # first-homwork-reprository-ir15 for lab5
+Додати клас Movie (id, title, ranking, release date, character number, ticket price, comment). Додати enum type: ACTION, COMEDY, DRAMA, FANTASY, … Додати клас Cinema (name, location), у якому відбуваються покази певного переліку фільмів. Додати функцію підрахунку прибутку за певним днем calculateProfit ( Movie*, day). Реалізувати метод для вибору фільму, який залежить від певних параметрів (на свій смак). Додати можливість сортування фільмів за датою випуску.
