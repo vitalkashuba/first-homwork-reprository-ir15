@@ -1,5 +1,4 @@
 from enum import Enum
-
 import random
 from datetime import datetime
 
@@ -29,15 +28,11 @@ class Movie:
     def date_(self, date):
         self.__date = date    
 
-    
 class Genre(Enum):
     ACTION = 1
     COMEDY = 2
     DRAMA = 3
     FANTASY = 4
-
-
-
 
 class Cinema:
     def __init__(self, name, location,  *movies):
@@ -54,19 +49,16 @@ class Cinema:
         self._date = date
 
     def calculate_profit(self, day):
-        
         for movie in self.movies:
             all_profit = random.randint(1,1000)
-            
             if movie.date == day:
-                
                 sold_tickets = random.randint(1,1000) 
                 all_profit =+( sold_tickets * movie.ticket_price)
             return all_profit
 
-    
     def sort_by_date(self):
         self.movies.sort(key=lambda x: x.date, reverse=True)
+        
 if __name__ == '__main__':
     movie1 = Movie(123456789, "fiting club", 1, 15, 120, Genre.ACTION, "вам ім'я ібрагім а чомнібуть говоріт????", 2006, 6, 3)
     movie2 = Movie(123456789, "Godfather ", 1, 15, 130, Genre.DRAMA, "вам ім'я ібрагім а чомнібуть говоріт????", 2004, 6, 3)
