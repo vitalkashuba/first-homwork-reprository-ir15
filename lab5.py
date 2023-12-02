@@ -3,6 +3,9 @@ import random
 from datetime import datetime
 
 class Movie:
+    '''
+    this class describes objects of type "Movie" using certain fields
+    '''
     def __init__(self, id, title, ranking, character_number, ticket_price, genre, comment ,year, month, day):
         self.id = id
         self.title = title
@@ -29,12 +32,18 @@ class Movie:
         self.__date = date    
 
 class Genre(Enum):
+    '''
+    the Genre class is used to define a enumerate of movie genres using enumerations
+    '''
     ACTION = 1
     COMEDY = 2
     DRAMA = 3
     FANTASY = 4
 
 class Cinema:
+    '''
+    this class describes objects of type "Cinema" using certain fields
+    '''
     def __init__(self, name, location,  *movies):
         self.name = name
         self.location = location
@@ -49,6 +58,9 @@ class Cinema:
         self._date = date
 
     def calculate_profit(self, day):
+        '''
+        this method calculates the profit for the day based on the number of tickets purchased
+        '''
         for movie in self.movies:
             all_profit = random.randint(1,1000)
             if movie.date == day:
@@ -57,6 +69,9 @@ class Cinema:
             return all_profit
 
     def sort_by_date(self):
+        '''
+        this method sorts movies from newest to oldest
+        '''
         self.movies.sort(key=lambda x: x.date, reverse=True)
         
 if __name__ == '__main__':
