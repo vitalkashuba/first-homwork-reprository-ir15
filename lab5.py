@@ -6,7 +6,8 @@ class Movie:
     '''
     this class describes objects of type "Movie" using certain fields
     '''
-    def __init__(self, id, title, ranking, character_number, ticket_price, genre, comment ,year, month, day):
+    def __init__(self, id, title, ranking, character_number,
+                 ticket_price, genre, comment ,year, month, day):
         self.id = id
         self.title = title
         self.ranking = ranking
@@ -59,7 +60,8 @@ class Cinema:
 
     def calculate_profit(self, day):
         '''
-        this method calculates the profit for the day based on the number of tickets purchased
+        this method calculates the profit for
+        the day based on the number of tickets purchased
         '''
         for movie in self.movies:
             all_profit = random.randint(1,1000)
@@ -75,9 +77,12 @@ class Cinema:
         self.movies.sort(key=lambda x: x.date, reverse=True)
         
 if __name__ == '__main__':
-    movie1 = Movie(123456789, "fiting club", 1, 15, 120, Genre.ACTION, "вам ім'я ібрагім а чомнібуть говоріт????", 2006, 6, 3)
-    movie2 = Movie(123456789, "Godfather ", 1, 15, 130, Genre.DRAMA, "вам ім'я ібрагім а чомнібуть говоріт????", 2004, 6, 3)
-    movie3 = Movie(123456789, "spider man ", 1, 15, 10, Genre.FANTASY, "вам ім'я ібрагім а чомнібуть говоріт????", 2002, 6, 3)
+    movie1 = Movie(123456789, "fiting club", 1, 15, 120, Genre.ACTION,
+                   "перше правило", 2006, 6, 3)
+    movie2 = Movie(123456789, "Godfather ", 1, 15, 130, Genre.DRAMA,
+                   " де моє кільце , Джони", 2004, 6, 3)
+    movie3 = Movie(123456789, "spider man ", 1, 15, 10, Genre.FANTASY,
+                   "Я вибачаю тебе", 2002, 6, 3)
     tarantino = Cinema("tarantino", "drohobuch", movie1,movie2,movie3)
     print(movie2.character_number)
     print(movie1.genre)
