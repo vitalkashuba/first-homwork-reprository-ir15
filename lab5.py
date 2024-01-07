@@ -43,7 +43,7 @@ class Genre(Enum):
 
 class Cinema:
     '''
-    this class describes objects of type "Cinema" using certain fields
+    The Cinema class represents a place where movies are shown
     '''
     def __init__(self, name, location,  *movies):
         self.name = name
@@ -77,12 +77,12 @@ class Cinema:
         self.movies.sort(key=lambda x: x.date, reverse=True)
         
 if __name__ == '__main__':
-    movie1 = Movie(123456789, "fiting club", 1, 15, 120, Genre.ACTION,
-                   "перше правило", 2006, 6, 3)
-    movie2 = Movie(123456789, "Godfather ", 1, 15, 130, Genre.DRAMA,
-                   " де моє кільце , Джони", 2004, 6, 3)
-    movie3 = Movie(123456789, "spider man ", 1, 15, 10, Genre.FANTASY,
-                   "Я вибачаю тебе", 2002, 6, 3)
+    movie1 = Movie(123456789, "fiting_club", 1, 15, 120, Genre.ACTION,
+                   "First rule..", 2006, 6, 3)
+    movie2 = Movie(123456789, "godfather ", 1, 15, 130, Genre.DRAMA,
+                   " Where is my ring johnny..", 2004, 6, 3)
+    movie3 = Movie(123456789, "spider_man ", 1, 15, 10, Genre.FANTASY,
+                   "I forgive you", 2002, 6, 3)
     tarantino = Cinema("tarantino", "drohobuch", movie1,movie2,movie3)
     print(movie2.character_number)
     print(movie1.genre)
